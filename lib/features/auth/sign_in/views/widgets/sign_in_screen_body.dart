@@ -1,0 +1,94 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:green_loop/core/helper/show_custom_dialog.dart';
+import 'package:green_loop/core/utilies/assets/images/app_images.dart';
+import 'package:green_loop/core/utilies/extensions/app_extensions.dart';
+import 'package:green_loop/features/auth/sign_in/view_models/cubit/sign_in_cubit.dart';
+import 'package:green_loop/features/auth/sign_in/views/widgets/company_tap.dart';
+import 'package:green_loop/features/auth/sign_in/views/widgets/customer_tab.dart';
+import 'package:green_loop/features/auth/sign_in/views/widgets/sign_in_tab_bar.dart';
+import 'package:green_loop/generated/locale_keys.g.dart';
+
+class SignInScreenBody extends StatelessWidget {
+  const SignInScreenBody({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: DefaultTabController(
+        length: 2,
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: context.width * 0.05,
+            vertical: context.height * 0.007,
+          ),
+          child: Column(
+            children: [
+              SizedBox(
+                height: context.height * 0.05,
+              ),
+              Image.asset(
+                AppImages.logo,
+                width: context.width * 0.4,
+              ),
+              SizedBox(
+                height: context.height * 0.03,
+              ),
+              SignInTabBar(),
+              BlocProvider(
+                create: (context) => SignInCubit(),
+                child: BlocConsumer<SignInCubit, SignInState>(
+                  listener: (context, state) {
+                    if (state is SignInSuccess) {
+                      context.pushAndRemoveUntilScreen(state.route);
+                      showCustomDialog(
+                        title: LocaleKeys.signIn_dialog_Success.tr(),
+                        description:
+                            LocaleKeys.signIn_dialog_SuccessMessage.tr(),
+                        dialogType: DialogType.success,
+                      );
+                    }
+                    if (state is SelectDiffrentRole) {
+                      showCustomDialog(
+                        title: LocaleKeys.signIn_dialog_Failure.tr(),
+                        description:
+                            "${LocaleKeys.signIn_dialog_FailureMessage.tr()} ${state.role}",
+                        dialogType: DialogType.error,
+                      );
+                    }
+                    if (state is SignInFailure) {
+                      showCustomDialog(
+                        title: LocaleKeys.signIn_dialog_Failure.tr(),
+                        description: state.error,
+                        dialogType: DialogType.error,
+                      );
+                    }
+                  },
+                  builder: (context, state) {
+                    var cubit = context.read<SignInCubit>();
+                    return Expanded(
+                      child: TabBarView(
+                        children: [
+                          CustomerTab(
+                            cubit: cubit,
+                          ),
+                          CompanyTab(
+                            cubit: cubit,
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
