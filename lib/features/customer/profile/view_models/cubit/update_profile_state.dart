@@ -20,3 +20,5 @@ final class PickImageFailed extends UpdateProfileState {
 
   PickImageFailed({required this.message});
 }
+
+final class UserDataUpdated extends UpdateProfileState {}

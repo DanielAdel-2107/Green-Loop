@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,23 @@ part 'update_profile_state.dart';
 class UpdateProfileCubit extends Cubit<UpdateProfileState> {
   UpdateProfileCubit() : super(UpdateProfileInitial()) {
     getUserData();
+    listenToUserData();
+  }
+
+  StreamSubscription<List<Map<String, dynamic>>>? _userDataSubscription;
+
+  void listenToUserData() {
+    _userDataSubscription = supabase
+        .from('customerss')
+        .stream(primaryKey: ['id'])
+        .eq('id', supabase.auth.currentUser!.id)
+        .listen((data) {
+          if (data.isNotEmpty) {
+            user = UserModel.fromJson(data.first);
+            getIt<CacheHelper>().saveUserModel(user!);
+            emit(UserDataUpdated());
+          }
+        });
   }
 
   void getUserData() {
@@ -77,5 +95,11 @@ class UpdateProfileCubit extends Cubit<UpdateProfileState> {
         .single();
     await getIt<CacheHelper>().saveUserModel(UserModel.fromJson(data));
     getUserData();
+  }
+
+  @override
+  Future<void> close() {
+    _userDataSubscription?.cancel();
+    return super.close();
   }
 }

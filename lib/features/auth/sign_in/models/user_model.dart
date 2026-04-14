@@ -16,7 +16,7 @@ class UserModel {
       email: json['email'],
       address: json['address'],
       image: json['image'],
-      voucher: json['voucher'].toDouble() ?? 0.0,
+      voucher: (json['voucher'] as num?)?.toDouble() ?? 0.0,
     );
   }
 
