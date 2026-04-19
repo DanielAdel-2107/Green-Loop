@@ -74,7 +74,8 @@
     "Jar": "Jar",
     "DrinkingGlass": "Drinking Glass",
     "BrokenGlass": "Broken Glass",
-    "PlateBowl": "Plate & Bowl",
+      "Lamp": "Lamp",
+      "Bowl": "Bowl",
     "Other": "Other"
   },
   "Metal": {
@@ -83,7 +84,7 @@
     "Saucepan": "Saucepan",
     "AluminumFoil": "Aluminum Foil",
     "Wrench": "Wrench",
-    "Screm": "Screm",
+    "Screw": "Screw",
     "Can": "Can",
     "Other": "Other"
   },

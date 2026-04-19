@@ -6,19 +6,17 @@ import 'package:green_loop/features/customer/pekia_price/views/screens/pekia_pri
 import 'package:green_loop/features/customer/profile/views/widgets/profile_screen_body.dart';
 part 'bottom_navigation_bar_state.dart';
 
-
 class BottomNavigationBarCubit extends Cubit<int> {
   BottomNavigationBarCubit() : super(0);
   //! change screen
   int _index = 2;
   int get index => _index;
-  
+
   List<Widget> screens = [
     BuyRedeemScreenBody(),
     PekiaPriseScreen(),
     CategoriesScreenBody(),
     ProfileScreenBody(),
-    CategoriesScreenBody(),
   ];
   void changeScreen(int index) {
     _index = index;

@@ -93,12 +93,12 @@ class AppConstants {
             name: LocaleKeys.categoryProducts_Glass_BrokenGlass),
         CategoryProductsModel(
             image: AppImages.plateImage,
-            value: "Plate & Bowl",
-            name: LocaleKeys.categoryProducts_Glass_PlateBowl),
+            value: "Lamp",
+            name: LocaleKeys.categoryProducts_Glass_Lamp),
         CategoryProductsModel(
             image: AppImages.bowlImage,
-            value: "Plate & Bowl",
-            name: LocaleKeys.categoryProducts_Glass_PlateBowl),
+            value: "Bowl",
+            name: LocaleKeys.categoryProducts_Glass_Bowl),
         CategoryProductsModel(
             image: AppImages.otherImage,
             value: "Other",
@@ -129,8 +129,8 @@ class AppConstants {
             name: LocaleKeys.categoryProducts_Metal_Wrench),
         CategoryProductsModel(
             image: AppImages.screwImage,
-            value: "Screm",
-            name: LocaleKeys.categoryProducts_Metal_Screm),
+            value: "Screw",
+            name: LocaleKeys.categoryProducts_Metal_Screw),
         CategoryProductsModel(
             image: AppImages.canImage,
             value: "Can",

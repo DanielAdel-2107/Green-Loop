@@ -40,9 +40,7 @@ class CategoriesScreen extends StatelessWidget {
                 CustomBottomNavigationBarIcon(
                   icon: Icons.person,
                 ),
-                CustomBottomNavigationBarIcon(
-                  icon: Icons.notifications_on_outlined,
-                ),
+
               ],
             ),
           );

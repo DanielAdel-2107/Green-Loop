@@ -90,7 +90,8 @@ class CodegenLoader extends AssetLoader{
       "Jar": "برطمان",
       "DrinkingGlass": "أكواب زجاجية",
       "BrokenGlass": "زجاج مكسور",
-      "PlateBowl": "أطباق وعاء",
+      "Lamp": "اللمبة",
+      "Bowl": "وعاء",
       "Other": "أخرى"
     },
     "Metal": {
@@ -99,7 +100,7 @@ class CodegenLoader extends AssetLoader{
       "Saucepan": "قدر طهي",
       "AluminumFoil": "ورق ألومنيوم",
       "Wrench": "مفتاح ربط",
-      "Screm": "برغي / مسمار",
+      "Screw": "برغي / مسمار",
       "Can": "علبة معدنية (كانز)",
       "Other": "أخرى"
     },
@@ -299,7 +300,8 @@ static const Map<String,dynamic> _en = {
       "Jar": "Jar",
       "DrinkingGlass": "Drinking Glass",
       "BrokenGlass": "Broken Glass",
-      "PlateBowl": "Plate & Bowl",
+      "Lamp": "Lamp",
+      "Bowl": "Bowl",
       "Other": "Other"
     },
     "Metal": {
@@ -308,7 +310,7 @@ static const Map<String,dynamic> _en = {
       "Saucepan": "Saucepan",
       "AluminumFoil": "Aluminum Foil",
       "Wrench": "Wrench",
-      "Screm": "Screm",
+      "Screw": "Screw",
       "Can": "Can",
       "Other": "Other"
     },

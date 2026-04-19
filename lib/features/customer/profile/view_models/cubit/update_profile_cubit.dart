@@ -72,8 +72,9 @@ class UpdateProfileCubit extends Cubit<UpdateProfileState> {
         emit(UpdateProfileLoading());
         await supabase.from('customerss').update({
           if (nameController.text != user!.name) 'name': nameController.text,
-          if (nameController.text != user!.email) 'email': emailController.text,
-          if (nameController.text != user!.address)
+          if (emailController.text != user!.email)
+            'email': emailController.text,
+          if (addressController.text != user!.address)
             'address': addressController.text,
           if (imagePath != null) 'image': imagePath
         }).eq('id', supabase.auth.currentUser!.id);

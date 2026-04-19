@@ -102,10 +102,14 @@ class CategoryDetailsScreenBody extends StatelessWidget {
                             context.popScreen();
                           }),
                       state is AddRequestLoading
-                          ? Center(
-                              child: CircularProgressIndicator(
-                              color: AppColors.primaryColor,
-                            ))
+                          ? SizedBox(
+                              width: context.width * 0.75,
+                              child: Center(
+                                child: CircularProgressIndicator(
+                                  color: AppColors.primaryColor,
+                                ),
+                              ),
+                            )
                           : CustomElevatedButton(
                               name: LocaleKeys.categoryDetails_AddRequest.tr(),
                               width: context.width * 0.75,

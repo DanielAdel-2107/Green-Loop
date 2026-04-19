@@ -63,7 +63,8 @@ abstract class  LocaleKeys {
   static const categoryProducts_Glass_Jar = 'categoryProducts.Glass.Jar';
   static const categoryProducts_Glass_DrinkingGlass = 'categoryProducts.Glass.DrinkingGlass';
   static const categoryProducts_Glass_BrokenGlass = 'categoryProducts.Glass.BrokenGlass';
-  static const categoryProducts_Glass_PlateBowl = 'categoryProducts.Glass.PlateBowl';
+  static const categoryProducts_Glass_Lamp = 'categoryProducts.Glass.Lamp';
+  static const categoryProducts_Glass_Bowl = 'categoryProducts.Glass.Bowl';
   static const categoryProducts_Glass_Other = 'categoryProducts.Glass.Other';
   static const categoryProducts_Glass = 'categoryProducts.Glass';
   static const categoryProducts_Metal_title = 'categoryProducts.Metal.title';
@@ -71,7 +72,7 @@ abstract class  LocaleKeys {
   static const categoryProducts_Metal_Saucepan = 'categoryProducts.Metal.Saucepan';
   static const categoryProducts_Metal_AluminumFoil = 'categoryProducts.Metal.AluminumFoil';
   static const categoryProducts_Metal_Wrench = 'categoryProducts.Metal.Wrench';
-  static const categoryProducts_Metal_Screm = 'categoryProducts.Metal.Screm';
+  static const categoryProducts_Metal_Screw = 'categoryProducts.Metal.Screw';
   static const categoryProducts_Metal_Can = 'categoryProducts.Metal.Can';
   static const categoryProducts_Metal_Other = 'categoryProducts.Metal.Other';
   static const categoryProducts_Metal = 'categoryProducts.Metal';
