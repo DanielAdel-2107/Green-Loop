@@ -37,6 +37,7 @@ class UpdateProfileCubit extends Cubit<UpdateProfileState> {
     nameController.text = user!.name;
     emailController.text = user!.email;
     addressController.text = user!.address;
+    phoneController.text = user!.phone ?? '';
   }
 
   File? file;
@@ -46,6 +47,7 @@ class UpdateProfileCubit extends Cubit<UpdateProfileState> {
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final addressController = TextEditingController();
+  final phoneController = TextEditingController();
   //
   pickImage() async {
     emit(PickImageLoading());
@@ -64,6 +66,7 @@ class UpdateProfileCubit extends Cubit<UpdateProfileState> {
     if (nameController.text != user!.name ||
         emailController.text != user!.email ||
         addressController.text != user!.address ||
+        phoneController.text != (user!.phone ?? '') ||
         file != null) {
       if (file != null) {
         imagePath = await uploadFileToSupabaseStorage(file: file!);
@@ -76,6 +79,8 @@ class UpdateProfileCubit extends Cubit<UpdateProfileState> {
             'email': emailController.text,
           if (addressController.text != user!.address)
             'address': addressController.text,
+          if (phoneController.text != (user!.phone ?? ''))
+            'phone': phoneController.text,
           if (imagePath != null) 'image': imagePath
         }).eq('id', supabase.auth.currentUser!.id);
         await saveUserData();

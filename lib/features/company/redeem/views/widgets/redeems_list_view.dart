@@ -1,5 +1,7 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:green_loop/core/helper/show_custom_dialog.dart';
 import 'package:green_loop/core/utilies/colors/app_colors.dart';
 import 'package:green_loop/core/utilies/extensions/app_extensions.dart';
 import 'package:green_loop/core/utilies/styles/app_text_styles.dart';
@@ -46,8 +48,16 @@ class RedeemsListView extends StatelessWidget {
                 child: RedeemListTile(
                   redeemModel: redeemCubit.redeemList[index],
                   onPressed: () {
-                    redeemCubit.deleteRedeem(
-                      id: redeemCubit.redeemList[index].id,
+                    showCustomDialog(
+                      title: "Delete",
+                      description: "Are you sure you want to delete this item?",
+                      dialogType: DialogType.question,
+                      btnOkOnPress: () {
+                        redeemCubit.deleteRedeem(
+                          id: redeemCubit.redeemList[index].id,
+                        );
+                      },
+                      btnCancelOnPress: () {},
                     );
                   },
                 ),

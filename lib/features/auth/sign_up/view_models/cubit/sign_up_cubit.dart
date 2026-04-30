@@ -16,12 +16,14 @@ class SignUpCubit extends Cubit<SignUpState> {
   final companyPasswordController = TextEditingController();
   final companyAddressController = TextEditingController();
   final companyIndustryController = TextEditingController();
+  final companyPhoneController = TextEditingController();
   final companyFormKey = GlobalKey<FormState>();
   // customer
   final customerNameController = TextEditingController();
   final customerEmailController = TextEditingController();
   final customerPasswordController = TextEditingController();
   final customerAddressController = TextEditingController();
+  final customerPhoneController = TextEditingController();
   final customerFormKey = GlobalKey<FormState>();
   //! sign up with supabase
   signUp({
@@ -30,6 +32,7 @@ class SignUpCubit extends Cubit<SignUpState> {
     required String email,
     required String password,
     required String address,
+    required String phone,
   }) async {
     if (role == "Customer"
         ? customerFormKey.currentState!.validate()
@@ -49,6 +52,7 @@ class SignUpCubit extends Cubit<SignUpState> {
             "name": name,
             "email": email,
             "address": address,
+            "phone": phone,
             if (role != "Customer") "industry": companyIndustryController.text
           },
         );

@@ -68,6 +68,7 @@ class ProfileScreenBody extends StatelessWidget {
                     addressController: cubit.addressController,
                     nameController: cubit.nameController,
                     emailController: cubit.emailController,
+                    phoneController: cubit.phoneController,
                     voucher: "${cubit.user!.voucher}  \$",
                   ),
                   SizedBox(

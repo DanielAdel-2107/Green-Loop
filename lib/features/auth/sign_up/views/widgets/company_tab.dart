@@ -63,6 +63,11 @@ class CompanyTab extends StatelessWidget {
                   ],
                 ),
                 CustomTextFormFieldWithTitle(
+                  hintText: LocaleKeys.signUp_hintTextPhoneCompany.tr(),
+                  title: LocaleKeys.signUp_titlePhoneCompany.tr(),
+                  controller: cubit.companyPhoneController,
+                ),
+                CustomTextFormFieldWithTitle(
                   hintText: LocaleKeys.signIn_hintTextPasswordCompany.tr(),
                   title: LocaleKeys.signIn_titlePasswordCompany.tr(),
                   controller: cubit.companyPasswordController,
@@ -84,6 +89,7 @@ class CompanyTab extends StatelessWidget {
                                 email: cubit.companyEmailController.text.trim(),
                                 name: cubit.companyNameController.text,
                                 password: cubit.companyPasswordController.text,
+                                phone: cubit.companyPhoneController.text,
                               );
                             },
                             height: context.height * 0.07,

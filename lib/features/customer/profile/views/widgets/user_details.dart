@@ -10,11 +10,13 @@ class UserDetails extends StatelessWidget {
     required this.nameController,
     required this.emailController,
     required this.addressController,
+    required this.phoneController,
     required this.voucher,
   });
   final TextEditingController nameController,
       emailController,
-      addressController;
+      addressController,
+      phoneController;
   final String voucher;
   @override
   Widget build(BuildContext context) {
@@ -42,6 +44,11 @@ class UserDetails extends StatelessWidget {
             title: LocaleKeys.profile_textField_address.tr(),
             hintText: addressController.text,
             controller: addressController,
+          ),
+          CustomTextFormFieldWithTitle(
+            title: LocaleKeys.profile_textField_phone.tr(),
+            hintText: phoneController.text,
+            controller: phoneController,
           ),
           CustomTextFormFieldWithTitle(
             title: LocaleKeys.profile_textField_voucher.tr(),

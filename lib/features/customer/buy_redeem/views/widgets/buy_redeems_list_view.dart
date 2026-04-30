@@ -72,8 +72,16 @@ class RedeemsListView extends StatelessWidget {
                         redeemModel: redeemCubit.redeemList[index],
                         iconData: Icons.shopify_outlined,
                         onPressed: () {
-                          redeemCubit.buyRedeem(
-                            redeemPrice: redeemCubit.redeemList[index].price,
+                          showCustomDialog(
+                            title: LocaleKeys.Redeem_dialog_Hint.tr(),
+                            description: "Are you sure you want to buy this item?",
+                            dialogType: DialogType.question,
+                            btnOkOnPress: () {
+                              redeemCubit.buyRedeem(
+                                redeemPrice: redeemCubit.redeemList[index].price,
+                              );
+                            },
+                            btnCancelOnPress: () {},
                           );
                         },
                       ),

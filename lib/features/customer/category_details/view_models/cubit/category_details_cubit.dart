@@ -47,6 +47,7 @@ class CategoryDetailsCubit extends Cubit<CategoryDetailsState> {
             "product_price": productPrice,
             "user_id": getIt<SupabaseClient>().auth.currentUser!.id,
             "user_name": getIt<CacheHelper>().getUserModel()!.name,
+            "user_phone": getIt<CacheHelper>().getUserModel()!.phone,
           },
         );
 

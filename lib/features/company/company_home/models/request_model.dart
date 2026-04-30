@@ -8,6 +8,7 @@ class RequestModel {
   final String? companyId;
   final String? companyName;
   final String userName;
+  final String? userPhone;
   final String userId;
   final String status;
   final bool completeRequest;
@@ -15,6 +16,7 @@ class RequestModel {
   RequestModel(
       {required this.id,
       required this.userName,
+      this.userPhone,
       required this.productPrice,
       required this.productQuantity,
       required this.productName,
@@ -29,6 +31,7 @@ class RequestModel {
     return RequestModel(
       id: json['id'],
       userName: (json['user_name']),
+      userPhone: json['user_phone'],
       productPrice: (json['product_price']).toDouble(),
       productQuantity: (json['product_quantity']).toDouble(),
       productName: json['product_name'],
@@ -50,6 +53,7 @@ class RequestModel {
         'company_id': companyId,
         'company_name': companyName,
         'user_name': userName,
+        'user_phone': userPhone,
         'user_id': userId,
         'status': status,
         'complete_request': completeRequest

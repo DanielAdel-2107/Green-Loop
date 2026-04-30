@@ -32,6 +32,7 @@
       "name": "User Name",
       "email": "User Email",
       "address": "User Address",
+      "phone": "User Phone",
       "voucher": "My Voucher"
     },
     "dialog":{
@@ -160,7 +161,8 @@
     "ProductName":"Product Name",
     "ProductQuantity":"Product Quantity",
     "ProductPrice":"Product Price",
-    "UserName":"User Name"
+    "UserName":"User Name",
+    "UserPhone":"User Phone"
   },
   "Splash":{
     "green_loop":"Green Loop"
@@ -202,6 +204,12 @@
     "titleNameCustomer":"Customer name",
     "hintTextaddressCustomer":"enter customer address",
     "titleAddressCustomer":"Customer address",
+    "hintTextPhone":"enter phone number",
+    "titlePhone":"Phone Number",
+    "hintTextPhoneCompany":"enter phone number",
+    "titlePhoneCompany":"Phone Number",
+    "hintTextPhoneCustomer":"enter phone number",
+    "titlePhoneCustomer":"Phone Number",
     "dialog":{
       "Success":"Success",
       "SuccessMessage":"Sign Up successfully",

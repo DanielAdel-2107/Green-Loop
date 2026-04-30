@@ -32,6 +32,7 @@
       "name": "اسم المستخدم",
       "email": "البريد الإلكتروني",
       "address": "العنوان",
+      "phone": "رقم الهاتف",
       "voucher": "قسيمة الشراء"
     },
     "dialog":{
@@ -158,7 +159,8 @@
     "ProductName": "اسم المنتج",
     "ProductQuantity": "كمية المنتج",
     "ProductPrice": "سعر المنتج",
-    "UserName": "اسم المستخدم"
+    "UserName": "اسم المستخدم",
+    "UserPhone": "رقم الهاتف"
 },
 "Splash":{
     "green_loop":"إعادة التدوير"
@@ -200,6 +202,12 @@
     "titleNameCustomer": "اسم العميل",
     "hintTextaddressCustomer": "أدخل عنوان العميل",
     "titleAddressCustomer": "عنوان العميل",
+    "hintTextPhone": "أدخل رقم الهاتف",
+    "titlePhone": "رقم الهاتف",
+    "hintTextPhoneCompany": "أدخل رقم الهاتف",
+    "titlePhoneCompany": "رقم الهاتف",
+    "hintTextPhoneCustomer": "أدخل رقم الهاتف",
+    "titlePhoneCustomer": "رقم الهاتف",
     "dialog": {
       "Success": "تم بنجاح",
       "SuccessMessage": "تم إنشاء الحساب بنجاح",

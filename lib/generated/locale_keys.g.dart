@@ -27,6 +27,7 @@ abstract class  LocaleKeys {
   static const profile_textField_name = 'profile.textField.name';
   static const profile_textField_email = 'profile.textField.email';
   static const profile_textField_address = 'profile.textField.address';
+  static const profile_textField_phone = 'profile.textField.phone';
   static const profile_textField_voucher = 'profile.textField.voucher';
   static const profile_textField = 'profile.textField';
   static const profile_dialog_success = 'profile.dialog.success';
@@ -138,6 +139,7 @@ abstract class  LocaleKeys {
   static const request_details_ProductQuantity = 'request_details.ProductQuantity';
   static const request_details_ProductPrice = 'request_details.ProductPrice';
   static const request_details_UserName = 'request_details.UserName';
+  static const request_details_UserPhone = 'request_details.UserPhone';
   static const request_details = 'request_details';
   static const Splash_green_loop = 'Splash.green_loop';
   static const Splash = 'Splash';
@@ -174,6 +176,12 @@ abstract class  LocaleKeys {
   static const signUp_titleNameCustomer = 'signUp.titleNameCustomer';
   static const signUp_hintTextaddressCustomer = 'signUp.hintTextaddressCustomer';
   static const signUp_titleAddressCustomer = 'signUp.titleAddressCustomer';
+  static const signUp_hintTextPhone = 'signUp.hintTextPhone';
+  static const signUp_titlePhone = 'signUp.titlePhone';
+  static const signUp_hintTextPhoneCompany = 'signUp.hintTextPhoneCompany';
+  static const signUp_titlePhoneCompany = 'signUp.titlePhoneCompany';
+  static const signUp_hintTextPhoneCustomer = 'signUp.hintTextPhoneCustomer';
+  static const signUp_titlePhoneCustomer = 'signUp.titlePhoneCustomer';
   static const signUp_dialog_Success = 'signUp.dialog.Success';
   static const signUp_dialog_SuccessMessage = 'signUp.dialog.SuccessMessage';
   static const signUp_dialog_Info = 'signUp.dialog.Info';

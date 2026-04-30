@@ -48,6 +48,7 @@ class CodegenLoader extends AssetLoader{
       "name": "اسم المستخدم",
       "email": "البريد الإلكتروني",
       "address": "العنوان",
+      "phone": "رقم الهاتف",
       "voucher": "قسيمة الشراء"
     },
     "dialog": {
@@ -174,7 +175,8 @@ class CodegenLoader extends AssetLoader{
     "ProductName": "اسم المنتج",
     "ProductQuantity": "كمية المنتج",
     "ProductPrice": "سعر المنتج",
-    "UserName": "اسم المستخدم"
+    "UserName": "اسم المستخدم",
+    "UserPhone": "رقم الهاتف"
   },
   "Splash": {
     "green_loop": "إعادة التدوير"
@@ -215,6 +217,12 @@ class CodegenLoader extends AssetLoader{
     "titleNameCustomer": "اسم العميل",
     "hintTextaddressCustomer": "أدخل عنوان العميل",
     "titleAddressCustomer": "عنوان العميل",
+    "hintTextPhone": "أدخل رقم الهاتف",
+    "titlePhone": "رقم الهاتف",
+    "hintTextPhoneCompany": "أدخل رقم الهاتف",
+    "titlePhoneCompany": "رقم الهاتف",
+    "hintTextPhoneCustomer": "أدخل رقم الهاتف",
+    "titlePhoneCustomer": "رقم الهاتف",
     "dialog": {
       "Success": "تم بنجاح",
       "SuccessMessage": "تم إنشاء الحساب بنجاح",
@@ -258,6 +266,7 @@ static const Map<String,dynamic> _en = {
       "name": "User Name",
       "email": "User Email",
       "address": "User Address",
+      "phone": "User Phone",
       "voucher": "My Voucher"
     },
     "dialog": {
@@ -384,7 +393,8 @@ static const Map<String,dynamic> _en = {
     "ProductName": "Product Name",
     "ProductQuantity": "Product Quantity",
     "ProductPrice": "Product Price",
-    "UserName": "User Name"
+    "UserName": "User Name",
+    "UserPhone": "User Phone"
   },
   "Splash": {
     "green_loop": "Green Loop"
@@ -425,6 +435,12 @@ static const Map<String,dynamic> _en = {
     "titleNameCustomer": "Customer name",
     "hintTextaddressCustomer": "enter customer address",
     "titleAddressCustomer": "Customer address",
+    "hintTextPhone": "enter phone number",
+    "titlePhone": "Phone Number",
+    "hintTextPhoneCompany": "enter phone number",
+    "titlePhoneCompany": "Phone Number",
+    "hintTextPhoneCustomer": "enter phone number",
+    "titlePhoneCustomer": "Phone Number",
     "dialog": {
       "Success": "Success",
       "SuccessMessage": "Sign Up successfully",

@@ -40,6 +40,10 @@ class CustomerTab extends StatelessWidget {
                   title: LocaleKeys.signUp_titleAddressCustomer.tr(),
                   controller: cubit.customerAddressController),
               CustomTextFormFieldWithTitle(
+                  hintText: LocaleKeys.signUp_hintTextPhoneCustomer.tr(),
+                  title: LocaleKeys.signUp_titlePhoneCustomer.tr(),
+                  controller: cubit.customerPhoneController),
+              CustomTextFormFieldWithTitle(
                 hintText: LocaleKeys.signIn_hintTextPasswordCustomer.tr(),
                 title: LocaleKeys.signIn_titlePasswordCustomer.tr(),
                 controller: cubit.customerPasswordController,
@@ -61,6 +65,7 @@ class CustomerTab extends StatelessWidget {
                               email: cubit.customerEmailController.text,
                               name: cubit.customerNameController.text,
                               password: cubit.customerPasswordController.text,
+                              phone: cubit.customerPhoneController.text,
                             );
                           },
                           height: context.height * 0.07,

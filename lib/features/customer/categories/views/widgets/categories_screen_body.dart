@@ -72,6 +72,7 @@ class CategoriesScreenBody extends StatelessWidget {
                                     dialogType: DialogType.question,
                                     btnOkOnPress:
                                         context.read<SignOutCubit>().signOut,
+                                    btnCancelOnPress: () {},
                                   );
                                 },
                               ),

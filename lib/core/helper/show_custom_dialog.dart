@@ -5,7 +5,8 @@ void showCustomDialog({
   required String title,
   required String description,
   required DialogType dialogType,
-   Function()? btnOkOnPress
+  Function()? btnOkOnPress,
+  Function()? btnCancelOnPress,
 }) {
   AwesomeDialog(
     context: navigatorKey.currentState!.context,
@@ -13,7 +14,7 @@ void showCustomDialog({
     animType: AnimType.bottomSlide,
     title: title,
     desc: description,
-    btnCancelOnPress: () {},
-    btnOkOnPress:btnOkOnPress ?? () {},
+    btnCancelOnPress: btnCancelOnPress,
+    btnOkOnPress: btnOkOnPress ?? () {},
   ).show();
 }

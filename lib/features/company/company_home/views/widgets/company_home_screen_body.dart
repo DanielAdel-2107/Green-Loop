@@ -76,9 +76,8 @@ class CompanyHomeScreenBody extends StatelessWidget {
                                       .tr(),
                                   dialogType: DialogType.question,
                                   btnOkOnPress:
-
-                                  
                                       context.read<SignOutCubit>().signOut,
+                                  btnCancelOnPress: () {},
                                 );
                               },
                             ),

@@ -49,6 +49,10 @@ class RequestDetailsScreenBody extends StatelessWidget {
             title: LocaleKeys.request_details_UserName.tr(),
             value: request.userName,
           ),
+          RequestDetailsListTile(
+            title: LocaleKeys.request_details_UserPhone.tr(),
+            value: request.userPhone ?? '',
+          ),
         ],
       ),
     );
