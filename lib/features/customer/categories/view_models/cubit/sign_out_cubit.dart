@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:green_loop/core/notifications/notification_service.dart';
 import 'package:meta/meta.dart';
 import 'package:green_loop/core/cache/cache_helper.dart';
 import 'package:green_loop/core/di/dependancy_injection.dart';
@@ -13,6 +14,7 @@ class SignOutCubit extends Cubit<SignOutState> {
     try {
       emit(SignOutLoading());
       await getIt<SupabaseClient>().auth.signOut();
+      getIt<NotificationService>().dispose();
       getIt<CacheHelper>().removeData(key: "userRole");
       emit(SignOutSuccess());
     } on Exception catch (e) {

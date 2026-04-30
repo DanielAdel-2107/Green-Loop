@@ -140,6 +140,7 @@ abstract class  LocaleKeys {
   static const request_details_ProductPrice = 'request_details.ProductPrice';
   static const request_details_UserName = 'request_details.UserName';
   static const request_details_UserPhone = 'request_details.UserPhone';
+  static const request_details_UserEmail = 'request_details.UserEmail';
   static const request_details = 'request_details';
   static const Splash_green_loop = 'Splash.green_loop';
   static const Splash = 'Splash';

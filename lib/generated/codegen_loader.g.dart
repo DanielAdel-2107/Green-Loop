@@ -176,7 +176,8 @@ class CodegenLoader extends AssetLoader{
     "ProductQuantity": "كمية المنتج",
     "ProductPrice": "سعر المنتج",
     "UserName": "اسم المستخدم",
-    "UserPhone": "رقم الهاتف"
+    "UserPhone": "رقم الهاتف",
+    "UserEmail": "البريد الإلكتروني"
   },
   "Splash": {
     "green_loop": "إعادة التدوير"
@@ -394,7 +395,8 @@ static const Map<String,dynamic> _en = {
     "ProductQuantity": "Product Quantity",
     "ProductPrice": "Product Price",
     "UserName": "User Name",
-    "UserPhone": "User Phone"
+    "UserPhone": "User Phone",
+    "UserEmail": "User Email"
   },
   "Splash": {
     "green_loop": "Green Loop"

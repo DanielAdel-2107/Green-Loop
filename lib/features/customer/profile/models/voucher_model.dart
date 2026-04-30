@@ -5,9 +5,9 @@ class VoucherModel {
   VoucherModel({required this.id, required this.voucher, required this.read});
   factory VoucherModel.fromJson(Map<String, dynamic> json) {
     return VoucherModel(
-      id: json['id'],
-      voucher: json['voucher'].toDouble(),
-      read: json['read'],
+      id: json['id'] ?? '',
+      voucher: (json['voucher'] as num?)?.toDouble() ?? 0.0,
+      read: json['read'] ?? false,
     );
   }
   toJson() => {

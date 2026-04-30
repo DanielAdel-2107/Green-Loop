@@ -162,7 +162,8 @@
     "ProductQuantity":"Product Quantity",
     "ProductPrice":"Product Price",
     "UserName":"User Name",
-    "UserPhone":"User Phone"
+    "UserPhone":"User Phone",
+    "UserEmail":"User Email"
   },
   "Splash":{
     "green_loop":"Green Loop"

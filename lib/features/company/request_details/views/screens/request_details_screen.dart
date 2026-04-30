@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:green_loop/core/utilies/colors/app_colors.dart';
 import 'package:green_loop/core/utilies/extensions/app_extensions.dart';
 import 'package:green_loop/features/company/company_home/models/request_model.dart';
+import 'package:green_loop/features/company/request_details/view_models/request_details_cubit/request_details_cubit.dart';
 import 'package:green_loop/features/company/request_details/views/widgets/request_details_screen_body.dart';
 
 class RequestDetailsScreen extends StatelessWidget {
@@ -12,18 +14,21 @@ class RequestDetailsScreen extends StatelessWidget {
     final args =
         ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
     var request = RequestModel.fromJson(args);
-    return Scaffold(
-      appBar: AppBar(
-        foregroundColor: Colors.white,
-        backgroundColor: AppColors.secondryColor,
-        title: Text(request.categoryName),
-      ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: context.width * 0.05,
-          vertical: context.height * 0.007,
+    return BlocProvider(
+      create: (context) => RequestDetailsCubit()..getUserEmail(request.userId),
+      child: Scaffold(
+        appBar: AppBar(
+          foregroundColor: Colors.white,
+          backgroundColor: AppColors.secondryColor,
+          title: Text(request.categoryName),
         ),
-        child: RequestDetailsScreenBody(request: request),
+        body: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: context.width * 0.05,
+            vertical: context.height * 0.007,
+          ),
+          child: RequestDetailsScreenBody(request: request),
+        ),
       ),
     );
   }

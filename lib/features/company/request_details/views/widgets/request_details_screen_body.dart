@@ -1,8 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:green_loop/core/helper/get_image_name.dart';
 import 'package:green_loop/core/utilies/extensions/app_extensions.dart';
 import 'package:green_loop/features/company/company_home/models/request_model.dart';
+import 'package:green_loop/features/company/request_details/view_models/request_details_cubit/request_details_cubit.dart';
 import 'package:green_loop/features/company/request_details/views/widgets/request_details_list_tile.dart';
 import 'package:green_loop/generated/locale_keys.g.dart';
 
@@ -52,6 +54,20 @@ class RequestDetailsScreenBody extends StatelessWidget {
           RequestDetailsListTile(
             title: LocaleKeys.request_details_UserPhone.tr(),
             value: request.userPhone ?? '',
+          ),
+          BlocBuilder<RequestDetailsCubit, RequestDetailsState>(
+            builder: (context, state) {
+              String email = '...';
+              if (state is GetUserEmailSuccess) {
+                email = state.email;
+              } else if (state is GetUserEmailFailure) {
+                email = 'N/A';
+              }
+              return RequestDetailsListTile(
+                title: LocaleKeys.request_details_UserEmail.tr(),
+                value: email,
+              );
+            },
           ),
         ],
       ),
